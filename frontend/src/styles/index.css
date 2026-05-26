@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light theme - DefiLlama inspired */
+    --color-bg: #ffffff;
+    --color-surface: #f6f8fa;
+    --color-surface-hover: #f3f4f6;
+    --color-border: #d0d7de;
+    --color-text: #24292f;
+    --color-text-muted: #57606a;
+    --color-text-subtle: #6e7781;
+    --color-primary: #4f46e5;
+    --color-primary-hover: #4338ca;
+    --color-success: #22c55e;
+    --color-warning: #eab308;
+    --color-danger: #ef4444;
+    --color-info: #3b82f6;
+  }
+
+  .dark {
+    /* Dark theme - DefiLlama inspired */
+    --color-bg: #0d1117;
+    --color-surface: #161b22;
+    --color-surface-hover: #21262d;
+    --color-border: #30363d;
+    --color-text: #c9d1d9;
+    --color-text-muted: #8b949e;
+    --color-text-subtle: #6e7681;
+    --color-primary: #818cf8;
+    --color-primary-hover: #6366f1;
+    --color-success: #3fb950;
+    --color-warning: #d29922;
+    --color-danger: #f85149;
+    --color-info: #58a6ff;
+  }
+
+  * {
+    @apply border-[var(--color-border)];
+  }
+
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-text)] antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] p-4;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:bg-[var(--color-surface-hover)];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary)];
+  }
+
+  .btn-primary {
+    @apply btn bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)];
+  }
+
+  .btn-secondary {
+    @apply btn bg-[var(--color-surface)] text-[var(--color-text)] border border-[var(--color-border)]
+           hover:bg-[var(--color-surface-hover)];
+  }
+
+  .btn-danger {
+    @apply btn bg-[var(--color-danger)] text-white hover:opacity-90;
+  }
+
+  .input {
+    @apply w-full px-3 py-2 rounded-lg bg-[var(--color-surface)] border border-[var(--color-border)]
+           text-[var(--color-text)] placeholder-[var(--color-text-muted)]
+           focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent
+           transition-all duration-200;
+  }
+
+  .select {
+    @apply input appearance-none cursor-pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply badge bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400;
+  }
+
+  .badge-warning {
+    @apply badge bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400;
+  }
+
+  .badge-danger {
+    @apply badge bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400;
+  }
+
+  .badge-info {
+    @apply badge bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400;
+  }
+
+  .text-positive {
+    @apply text-[var(--color-success)];
+  }
+
+  .text-negative {
+    @apply text-[var(--color-danger)];
+  }
+
+  .table-container {
+    @apply overflow-x-auto rounded-xl border border-[var(--color-border)];
+  }
+
+  .table {
+    @apply w-full text-sm text-left;
+  }
+
+  .table th {
+    @apply px-4 py-3 bg-[var(--color-surface)] text-[var(--color-text-muted)] font-medium uppercase text-xs tracking-wider;
+  }
+
+  .table td {
+    @apply px-4 py-3 border-t border-[var(--color-border)];
+  }
+
+  .table tr:hover td {
+    @apply bg-[var(--color-surface-hover)];
+  }
+
+  .stat-card {
+    @apply card flex flex-col;
+  }
+
+  .stat-label {
+    @apply text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-wider;
+  }
+
+  .stat-value {
+    @apply text-2xl font-bold text-[var(--color-text)] mt-1;
+  }
+
+  .stat-change {
+    @apply text-sm font-medium mt-1;
+  }
+
+  .yield-low {
+    @apply text-[var(--color-success)];
+  }
+
+  .yield-medium {
+    @apply text-[var(--color-warning)];
+  }
+
+  .yield-high {
+    @apply text-orange-500;
+  }
+
+  .yield-extreme {
+    @apply text-[var(--color-danger)];
+  }
+
+  .risk-low {
+    @apply bg-green-500/20 text-green-600 dark:text-green-400;
+  }
+
+  .risk-moderate {
+    @apply bg-blue-500/20 text-blue-600 dark:text-blue-400;
+  }
+
+  .risk-high {
+    @apply bg-yellow-500/20 text-yellow-600 dark:text-yellow-400;
+  }
+
+  .risk-extreme {
+    @apply bg-red-500/20 text-red-600 dark:text-red-400;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[var(--color-surface)];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--color-border)] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[var(--color-text-muted)];
+}
+
+/* Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(79, 70, 229, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.8);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+/* Toast notifications */
+.toast {
+  @apply fixed bottom-4 right-4 px-4 py-3 rounded-lg shadow-lg z-50 transition-all duration-300;
+}
+
+.toast-success {
+  @apply toast bg-[var(--color-success)] text-white;
+}
+
+.toast-error {
+  @apply toast bg-[var(--color-danger)] text-white;
+}
+
+.toast-warning {
+  @apply toast bg-[var(--color-warning)] text-black;
+}

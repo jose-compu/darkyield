@@ -1,3 +1,26 @@
+```
+.----------------------------------------------------------------------.
+|    '||                  '||                ||          '||       '|| |
+|  .. ||   ....   ... ..   ||  ..  .... ... ...    ....   ||     .. || |
+|.'  '||  '' .||   ||' ''  || .'    '|.  |   ||  .|...||  ||   .'  '|| |
+||.   ||  .|' ||   ||      ||'|.     '|.|    ||  ||       ||   |.   || |
+|'|..'||. '|..'|' .||.    .||. ||.    '|    .||.  '|...' .||.  '|..'||.|
+|                                  .. |                                |
+|                                   ''                                 |
+'----------------------------------------------------------------------'
+```
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.3-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Express](https://img.shields.io/badge/Express-API-000000?logo=express&logoColor=white)](https://expressjs.com/)
+[![DefiLlama](https://img.shields.io/badge/yields-DefiLlama-0E76FD)](https://defillama.com/yields)
+[![Paper Trading](https://img.shields.io/badge/mode-Paper%20Trading-22C55E)](https://github.com/jose-compu/darkyield)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![GitHub](https://img.shields.io/github/stars/jose-compu/darkyield?style=social)](https://github.com/jose-compu/darkyield)
+
 # DarkYield
 
 DarkYield is an automated yield farming optimization platform with a local web UI. It fetches yield data from DefiLlama, optimizes portfolio allocations using mathematical models, and executes automated rebalancing strategies.
